@@ -1,48 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220625 16:53:40.956" rpa="false" schemaversion="3">
-<suite id="s1" name="Homepage" source="C:\Users\admin\Documents\QA Engineer\TugasLima\Homepage.robot">
-<test id="s1-t1" name="User want to verify homepage" line="11">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>${Homepage_URL}</arg>
-<arg>${Browser_type}</arg>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220627 15:05:11.009" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="C:\Users\admin\Documents\QA Engineer\TugasLima\Steps\login.robot">
+<kw name="Open Browser Using Chrome" library="login_keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220625 16:53:41.281" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220625 16:53:41.281" endtime="20220625 16:54:11.762"/>
+<msg timestamp="20220627 15:05:11.263" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220627 15:05:11.263" endtime="20220627 15:05:12.702"/>
 </kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220627 15:05:12.702" endtime="20220627 15:05:12.855"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:11.263" endtime="20220627 15:05:12.855"/>
+</kw>
+<test id="s1-t1" name="User want to verify homepage of My Store" line="7">
+<kw name="Open Homepage My Store" library="login_keyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://automationpractice.com/index.php</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220627 15:05:12.860" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20220627 15:05:12.858" endtime="20220627 15:05:29.942"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:12.858" endtime="20220627 15:05:29.942"/>
+</kw>
+<kw name="I'm validate logo" library="login_keyword">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//*[@class="logo img-responsive"]</arg>
+<arg>${Logo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220625 16:54:11.799" level="INFO">Element '//*[@class="logo img-responsive"]' is displayed.</msg>
-<status status="PASS" starttime="20220625 16:54:11.763" endtime="20220625 16:54:11.799"/>
+<msg timestamp="20220627 15:05:29.973" level="INFO">Element '//*[@class="logo img-responsive"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 15:05:29.944" endtime="20220627 15:05:29.973"/>
 </kw>
+<status status="PASS" starttime="20220627 15:05:29.944" endtime="20220627 15:05:29.974"/>
+</kw>
+<kw name="I'm validate login" library="login_keyword">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//*[@class="login"]</arg>
+<arg>${Login}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220625 16:54:11.825" level="INFO">Element '//*[@class="login"]' is displayed.</msg>
-<status status="PASS" starttime="20220625 16:54:11.799" endtime="20220625 16:54:11.825"/>
+<msg timestamp="20220627 15:05:30.004" level="INFO">Element '//*[@class="login"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 15:05:29.975" endtime="20220627 15:05:30.004"/>
 </kw>
+<status status="PASS" starttime="20220627 15:05:29.975" endtime="20220627 15:05:30.004"/>
+</kw>
+<kw name="I'm validate Contact Us" library="login_keyword">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//*[@id="contact-link"]</arg>
+<arg>${Contact_Us}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220625 16:54:11.847" level="INFO">Element '//*[@id="contact-link"]' is displayed.</msg>
-<status status="PASS" starttime="20220625 16:54:11.826" endtime="20220625 16:54:11.847"/>
+<msg timestamp="20220627 15:05:30.030" level="INFO">Element '//*[@id="contact-link"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 15:05:30.005" endtime="20220627 15:05:30.031"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220625 16:54:11.848" endtime="20220625 16:54:14.221"/>
+<status status="PASS" starttime="20220627 15:05:30.005" endtime="20220627 15:05:30.031"/>
 </kw>
-<status status="PASS" starttime="20220625 16:53:41.280" endtime="20220625 16:54:14.222"/>
+<status status="PASS" starttime="20220627 15:05:12.856" endtime="20220627 15:05:30.032"/>
 </test>
-<status status="PASS" starttime="20220625 16:53:40.959" endtime="20220625 16:54:14.224"/>
+<test id="s1-t2" name="User click Sign In button" line="13">
+<kw name="I'm CLick Sign In" library="login_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 15:05:30.035" level="INFO">Clicking element '//*[@class="login"]'.</msg>
+<status status="PASS" starttime="20220627 15:05:30.035" endtime="20220627 15:05:42.134"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:30.035" endtime="20220627 15:05:42.134"/>
+</kw>
+<kw name="I'm Validate Sign In page" library="login_keyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${validateLoginForm}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220627 15:05:42.157" level="INFO">Element '//*[@id="login_form"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 15:05:42.136" endtime="20220627 15:05:42.157"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:42.135" endtime="20220627 15:05:42.157"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:30.034" endtime="20220627 15:05:42.158"/>
+</test>
+<test id="s1-t3" name="Im Input valid email and password In page" line="17">
+<kw name="I'm type email registred" library="login_keyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_regis}</arg>
+<arg>rahmandaarya@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220627 15:05:42.163" level="INFO">Typing text 'rahmandaarya@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20220627 15:05:42.162" endtime="20220627 15:05:42.288"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:42.161" endtime="20220627 15:05:42.288"/>
+</kw>
+<kw name="I'm type password registred in page" library="login_keyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>B4BNpUpk3.@!vQx</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220627 15:05:42.290" level="INFO">Typing text 'B4BNpUpk3.@!vQx' into text field '//*[@type="password"]'.</msg>
+<status status="PASS" starttime="20220627 15:05:42.289" endtime="20220627 15:05:42.406"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:42.289" endtime="20220627 15:05:42.407"/>
+</kw>
+<kw name="I'm click button signIn" library="login_keyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_signINLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220627 15:05:42.409" level="INFO">Clicking button '//*[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20220627 15:05:42.409" endtime="20220627 15:06:03.982"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:42.408" endtime="20220627 15:06:03.982"/>
+</kw>
+<kw name="I'm Validate Login1" library="login_keyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Validate_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220627 15:06:04.017" level="INFO">Element '//*[@class="info-account"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 15:06:03.984" endtime="20220627 15:06:04.017"/>
+</kw>
+<status status="PASS" starttime="20220627 15:06:03.984" endtime="20220627 15:06:04.018"/>
+</kw>
+<kw name="I'm click back to home" library="login_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${backHome}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 15:06:04.021" level="INFO">Clicking element '//*[@title="Home"]'.</msg>
+<status status="PASS" starttime="20220627 15:06:04.020" endtime="20220627 15:06:22.023"/>
+</kw>
+<status status="PASS" starttime="20220627 15:06:04.020" endtime="20220627 15:06:22.024"/>
+</kw>
+<kw name="I'm validate order page" library="login_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${validateOrderpage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 15:06:22.028" level="INFO">Clicking element '//*[@id="home-page-tabs"]'.</msg>
+<status status="PASS" starttime="20220627 15:06:22.026" endtime="20220627 15:06:22.081"/>
+</kw>
+<status status="PASS" starttime="20220627 15:06:22.025" endtime="20220627 15:06:22.081"/>
+</kw>
+<status status="PASS" starttime="20220627 15:05:42.160" endtime="20220627 15:06:22.082"/>
+</test>
+<test id="s1-t4" name="User Order Select One" line="25">
+<kw name="I'm CLick image blouse" library="login_keyword">
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>${clickImgBlouse}</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20220627 15:06:22.087" level="INFO">Clicking image '//*[@title="Blouse"]'.</msg>
+<status status="PASS" starttime="20220627 15:06:22.086" endtime="20220627 15:06:22.213"/>
+</kw>
+<status status="PASS" starttime="20220627 15:06:22.086" endtime="20220627 15:06:22.214"/>
+</kw>
+<kw name="I'm Click Proceed to checkout" library="login_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clickCO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 15:06:22.215" level="INFO">Clicking element '//*[@id="add_to_cart"]'.</msg>
+<msg timestamp="20220627 15:06:22.741" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-108.png"&gt;&lt;img src="selenium-screenshot-108.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220627 15:06:22.741" level="FAIL">Element with locator '//*[@id="add_to_cart"]' not found.</msg>
+<status status="FAIL" starttime="20220627 15:06:22.214" endtime="20220627 15:06:22.747"/>
+</kw>
+<status status="FAIL" starttime="20220627 15:06:22.214" endtime="20220627 15:06:22.749"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220627 15:06:22.750" endtime="20220627 15:06:22.750"/>
+</kw>
+<kw name="I'm validate CO" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.751" endtime="20220627 15:06:22.751"/>
+</kw>
+<kw name="I'm click proceed to checkout1" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.751" endtime="20220627 15:06:22.751"/>
+</kw>
+<kw name="I'm click proceed to checkout2" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.751" endtime="20220627 15:06:22.751"/>
+</kw>
+<kw name="I'm click agree" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.751" endtime="20220627 15:06:22.751"/>
+</kw>
+<kw name="I'm click proceed to checkout3" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.752" endtime="20220627 15:06:22.752"/>
+</kw>
+<kw name="I'm validate proceed payment" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.752" endtime="20220627 15:06:22.752"/>
+</kw>
+<kw name="I'm click proceed to checkout4" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.752" endtime="20220627 15:06:22.752"/>
+</kw>
+<kw name="I'm validate pay Back Check" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.753" endtime="20220627 15:06:22.753"/>
+</kw>
+<kw name="I'm click proceed to checkout5" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.753" endtime="20220627 15:06:22.753"/>
+</kw>
+<kw name="I'm validate conform order" library="login_keyword">
+<status status="NOT RUN" starttime="20220627 15:06:22.753" endtime="20220627 15:06:22.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220627 15:06:22.754" endtime="20220627 15:06:22.754"/>
+</kw>
+<status status="FAIL" starttime="20220627 15:06:22.084" endtime="20220627 15:06:22.754">Element with locator '//*[@id="add_to_cart"]' not found.</status>
+</test>
+<kw name="I'm Close Browser" library="login_keyword" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220627 15:06:22.757" endtime="20220627 15:06:25.263"/>
+</kw>
+<status status="PASS" starttime="20220627 15:06:22.757" endtime="20220627 15:06:25.263"/>
+</kw>
+<status status="FAIL" starttime="20220627 15:05:11.012" endtime="20220627 15:06:25.263"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Homepage">Homepage</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
