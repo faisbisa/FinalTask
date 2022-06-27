@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220625 16:53:40.956" rpa="false" schemaversion="3">
+<suite id="s1" name="Homepage" source="C:\Users\admin\Documents\QA Engineer\TugasLima\Homepage.robot">
+<test id="s1-t1" name="User want to verify homepage" line="11">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${Homepage_URL}</arg>
+<arg>${Browser_type}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220625 16:53:41.281" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220625 16:53:41.281" endtime="20220625 16:54:11.762"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@class="logo img-responsive"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220625 16:54:11.799" level="INFO">Element '//*[@class="logo img-responsive"]' is displayed.</msg>
+<status status="PASS" starttime="20220625 16:54:11.763" endtime="20220625 16:54:11.799"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@class="login"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220625 16:54:11.825" level="INFO">Element '//*[@class="login"]' is displayed.</msg>
+<status status="PASS" starttime="20220625 16:54:11.799" endtime="20220625 16:54:11.825"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="contact-link"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220625 16:54:11.847" level="INFO">Element '//*[@id="contact-link"]' is displayed.</msg>
+<status status="PASS" starttime="20220625 16:54:11.826" endtime="20220625 16:54:11.847"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220625 16:54:11.848" endtime="20220625 16:54:14.221"/>
+</kw>
+<status status="PASS" starttime="20220625 16:53:41.280" endtime="20220625 16:54:14.222"/>
+</test>
+<status status="PASS" starttime="20220625 16:53:40.959" endtime="20220625 16:54:14.224"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homepage">Homepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
